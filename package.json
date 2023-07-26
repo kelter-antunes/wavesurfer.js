@@ -43,7 +43,7 @@
   },
   "scripts": {
     "build:dev": "tsc -w --target ESNext",
-    "build": "rm -rf dist && tsc && rollup -c",
+    "build": "rd /s /q dist && tsc && rollup -c",
     "deploy": "yarn build && yarn docs",
     "prepublishOnly": "npm run build",
     "docs": "typedoc --titleLink '/' src/wavesurfer.ts src/plugins/*.ts --out docs",
